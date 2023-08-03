@@ -138,3 +138,8 @@ setenforce
 
 ```
 OverWrite access ALL in httpd.conf file in apache overwrite
+
+### issue route not working httpd/httpd.conf
+Overwrite var/www/html/  all 
+
+https://stackoverflow.com/questions/54510527/my-laravel-routes-is-not-working-on-centos
