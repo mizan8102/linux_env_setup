@@ -143,3 +143,27 @@ OverWrite access ALL in httpd.conf file in apache overwrite
 Overwrite var/www/html/  all 
 
 https://stackoverflow.com/questions/54510527/my-laravel-routes-is-not-working-on-centos
+
+
+### The stream or file "/var/www/html/chiklee_api/storage/logs/laravel.log" could not be opened in append mode: Failed to open stream: Permission denied The exception occurred while 
+
+```
+# Navigate to your Laravel project root directory
+cd /var/www/html/chiklee_api
+
+# Ensure the storage directory and its subdirectories have the correct permissions
+chmod -R 775 storage
+chown -R apache:apache storage
+```
+
+#### Temporary Files Directory:
+
+The error also mentions the temporary files directory /var/www/html/chiklee_api/storage/app/mpdf. Adjust the permissions for this directory as well:
+```
+# Navigate to the temporary files directory
+cd /var/www/html/chiklee_api/storage/app
+
+# Ensure the mpdf directory has the correct permissions
+chmod -R 775 mpdf
+chown -R apache:apache mpdf
+```
