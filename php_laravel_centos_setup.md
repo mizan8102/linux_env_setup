@@ -169,7 +169,7 @@ chown -R apache:apache mpdf
 ```
 
 ### User R+W permission Issue :
-<h4>Step-1: Ownership Check</h4>
+
 ```bash
 ls -l /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
 ```
