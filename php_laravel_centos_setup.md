@@ -167,3 +167,17 @@ cd /var/www/html/chiklee_api/storage/app
 chmod -R 775 mpdf
 chown -R apache:apache mpdf
 ```
+
+### User R+W permission Issue :
+<h4>Step-1: Ownership Check</h4>
+```
+ls -l /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
+``
+<h4>Step-2: Change Ownership and Permissions:</h4>
+```
+sudo chown -R yourusername:yourgroupname /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
+```
+<h4>Step-3: Grant write permissions to the directory and its contents, you can use:</h4>
+```
+sudo chmod -R u+w /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend
+```
