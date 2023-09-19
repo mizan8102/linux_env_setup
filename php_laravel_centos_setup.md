@@ -172,7 +172,7 @@ chown -R apache:apache mpdf
 <h4>Step-1: Ownership Check</h4>
 ```bash
 ls -l /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
-``
+```
 <h4>Step-2: Change Ownership and Permissions:</h4>
 ```bash
 sudo chown -R yourusername:yourgroupname /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
