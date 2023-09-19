@@ -50,7 +50,7 @@ sudo mysql
 ```
 
 ## Setup database and credentials
-
+##### Step-1: Ownership Check
 ```bash
 CREATE DATABASE example_database;
 GRANT ALL ON example_database.* TO 'example_user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
@@ -169,15 +169,15 @@ chown -R apache:apache mpdf
 ```
 
 ### User R+W permission Issue :
-
-```bash
+##### Step-1: Ownership Check
+```bash 
 ls -l /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
 ```
-<h4>Step-2: Change Ownership and Permissions:</h4>
+##### Step-2: Change Ownership and Permissions:
 ```bash
 sudo chown -R yourusername:yourgroupname /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend/
 ```
-<h4>Step-3: Grant write permissions to the directory and its contents, you can use:</h4>
+##### Step-3: Grant write permissions to the directory and its contents, you can use:
 ```bash
 sudo chmod -R u+w /var/www/html/BooksBDQA/booksbd/app/Http/Controllers/Backend
 ```
